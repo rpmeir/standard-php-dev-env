@@ -1,7 +1,7 @@
 # standard-php-dev-env
 Repository with basic environment for development with PHP language.
 
-Thanks to @paslandau for the great work provided in [docker-php-tutorial](https://github.com/paslandau/docker-php-tutorial/tree/part_3_structuring-the-docker-setup-for-php-projects), specifically the branch part 3, which served as the basis for this repository.
+Thanks for the great work provided in [docker-php-tutorial](https://github.com/paslandau/docker-php-tutorial/tree/part_3_structuring-the-docker-setup-for-php-projects), specifically the branch part 3, which served as the basis for this repository.
 
 ## Environment
 This repository contains four containers that make it possible to start coding after compiling the environment triggered by the make command.
