@@ -5,7 +5,7 @@ networks:
     driver: ${NETWORKS_DRIVER}
     ipam:
       config:
-        - subnet: "192.168.230.0/24"
+        - subnet: "192.168.203.0/24"
 
 volumes:
   data-spde:
@@ -30,7 +30,7 @@ services:
       - "${NGINX_HOST_HTTPS_PORT}:443"
     networks:
       backend:
-        ipv4_address: 192.168.230.13
+        ipv4_address: 192.168.203.13
         aliases:
           - ${APP_HOST}
 
@@ -51,7 +51,7 @@ services:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
     networks:
       backend:
-        ipv4_address: 192.168.230.12
+        ipv4_address: 192.168.203.12
 
   php-cli:
     image: standard-php-dev-env/php-cli
@@ -72,7 +72,7 @@ services:
       - "${WORKSPACE_HOST_SSH_PORT}:22"
     networks:
       backend:
-        ipv4_address: 192.168.230.11
+        ipv4_address: 192.168.203.11
 
   mysql:
     image: standard-php-dev-env/mysql
@@ -85,7 +85,7 @@ services:
       - ./mysql/init_data:/docker-entrypoint-initdb.d
     networks:
       backend:
-        ipv4_address: 192.168.230.10
+        ipv4_address: 192.168.203.10
     ports:
       - ${MYSQL_HOST_PORT}:3306
     environment:

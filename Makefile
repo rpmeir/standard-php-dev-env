@@ -1,6 +1,6 @@
 DOCKER_COMPOSE_DIR=./.docker
 DOCKER_COMPOSE_FILE=$(DOCKER_COMPOSE_DIR)/docker-compose.yml
-DEFAULT_CONTAINER=workspace
+DEFAULT_CONTAINER=php-cli
 DOCKER_COMPOSE=docker-compose -f $(DOCKER_COMPOSE_FILE) --project-directory $(DOCKER_COMPOSE_DIR)
 
 DEFAULT_GOAL := help
@@ -47,4 +47,4 @@ docker-down: docker-init ## Stop all docker containers. To only stop one contain
 
 .PHONY: docker-ipaddress
 docker-ipaddress: ## Get IP address of all containers.
-	docker network inspect -f '{{json .Containers}}' filipets-docker_backend | jq '.[] | .Name + ":" + .IPv4Address'
+	docker network inspect -f '{{json .Containers}}' standard-php-dev-env_backend | jq '.[] | .Name + ":" + .IPv4Address'

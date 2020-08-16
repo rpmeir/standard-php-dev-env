@@ -45,4 +45,4 @@ RUN /tmp/scripts/cleanup.sh
 
 CMD ["nginx"]
 
-EXPOSE 8898 8899
+EXPOSE 8083 8445
