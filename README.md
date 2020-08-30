@@ -29,4 +29,6 @@ make docker-down
 
 ## To do:
 * Improve this documentation
-* Include a service for email testing
+* Include a service for email testing (mailhog?)
+* Include PHPUnit
+* Include [mkcert](https://github.com/FiloSottile/mkcert#linux)
