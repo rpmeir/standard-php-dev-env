@@ -17,6 +17,5 @@ apt-get update -yqq && apt-get install -yqq \
     unzip \
     vim \
     wget \
-    libnss3-tools
-
+    libnss3-tools \
 ;
