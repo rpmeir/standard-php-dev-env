@@ -45,6 +45,6 @@ docker-up: docker-init ## Start all docker containers. To only start one contain
 docker-down: docker-init ## Stop all docker containers. To only stop one container, use CONTAINER=<service>
 	$(DOCKER_COMPOSE) down $(CONTAINER)
 
-.PHONY: docker-ipaddress
-docker-ipaddress: ## Get IP address of all containers.
+.PHONY: docker-net
+docker-net: ## Get IP address of all containers.
 	docker network inspect -f '{{json .Containers}}' standard-php-dev-env_backend | jq '.[] | .Name + ":" + .IPv4Address'
